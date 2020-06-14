@@ -1,2 +1,18 @@
-<!-- https://docs.nativescript.org/angular/core-concepts/angular-navigation.html#page-router-outlet -->
-<page-router-outlet></page-router-outlet>
+<RadSideDrawer #sideDrawer tkToggleNavButton>
+  <StackLayout tkDrawerContent class="sidedrawer-left">
+    <StackLayout class="sidedrawer-header" class="nav-header">
+      <Label [text]="appName"></Label>
+    </StackLayout>
+    <StackLayout class="sidedrawer-content">
+      <ListView [items]="menuItems">
+        <ng-template let-item="item">
+          <StackLayout>
+            <Label (tap)="handleMenuClick(item)" [text]="item.text" class="nav-item"></Label>
+          </StackLayout>
+        </ng-template>
+      </ListView>
+    </StackLayout>
+  </StackLayout>
+
+  <page-router-outlet tkMainContent></page-router-outlet>
+</RadSideDrawer>

@@ -1,0 +1,12 @@
+.nav-header {
+  font-size: 21;
+  background-color: rgb(200, 200, 200);
+  text-align: center;
+  vertical-align: center;
+  font-weight: bold;
+  height: 50;
+}
+
+.nav-item {
+  font-size: 18;
+}

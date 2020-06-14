@@ -1,0 +1,4 @@
+<ActionBar [title]="title">
+  <NavigationButton class="fas" icon="font://&#xf0c9;" *ngIf="isAndroid()" (tap)="handleMenuClick()"></NavigationButton>
+  <ActionItem icon="font://&#xf0c9;" *ngIf="isIOS()" ios.position="left" (tap)="handleMenuClick()"></ActionItem>
+</ActionBar>

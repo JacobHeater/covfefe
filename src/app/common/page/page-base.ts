@@ -1,5 +1,5 @@
 import { IPage } from "../../interfaces/page/ipage";
-import { AppEventBus, EVENT_MENU_CLICKED } from "../events";
+import { AppEventBus, EVENT_MENU_TAPPED } from "../events";
 
 export abstract class PageBase implements IPage {
   get title(): string {
@@ -11,8 +11,4 @@ export abstract class PageBase implements IPage {
   }
 
   protected abstract get $title(): string;
-
-  handleMenuClick() {
-    AppEventBus.raiseEvent(EVENT_MENU_CLICKED);
-  }
 }

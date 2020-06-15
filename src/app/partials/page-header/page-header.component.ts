@@ -1,5 +1,6 @@
-import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
-import { isAndroid, isIOS } from "tns-core-modules/platform";
+import { Component, OnInit, Input } from "@angular/core";
+import { AppEventBus, EVENT_MENU_TAPPED } from "../../common/events";
+import { PlatformSniffer } from "~/app/common/platform/platform-sniffer";
 
 @Component({
   selector: "page-header",
@@ -9,18 +10,17 @@ import { isAndroid, isIOS } from "tns-core-modules/platform";
 export class PageHeaderComponent implements OnInit {
   ngOnInit(): void {}
 
-  @Input("title") title: string;
-  @Output("menuClick")menuClick: EventEmitter<void> = new EventEmitter();
+  @Input("title") title: string = '[Title Here]';
 
   isIOS(): boolean {
-    return isIOS;
+    return PlatformSniffer.isIos;
   }
 
   isAndroid(): boolean {
-    return isAndroid;
+    return PlatformSniffer.isAndroid;
   }
 
-  handleMenuClick() {
-    this.menuClick.emit();
+  handleMenuTap() {
+    AppEventBus.raiseEvent(EVENT_MENU_TAPPED);
   }
 }

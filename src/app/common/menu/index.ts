@@ -1,18 +1,21 @@
 import { MenuItem } from "../../models/menu/menu-item";
+import { HomeComponent } from "~/app/home/home.component";
+import { RoastComponent } from "~/app/roast/roast.component";
+import { BrewComponent } from "~/app/brew/brew.component";
 
 export function retrieveMenuItems(): MenuItem[] {
   return [
     {
       link: [''],
-      text: 'Home'
+      text: HomeComponent.title
     },
     {
       link: ['/roast'],
-      text: 'Roasting'
+      text: RoastComponent.title
     },
     {
       link: ['/brew'],
-      text: "Brewing",
+      text: BrewComponent.title
     },
   ];
 }

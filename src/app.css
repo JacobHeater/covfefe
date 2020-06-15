@@ -25,13 +25,17 @@ Button.-primary {
 }
 
 .fab {
-    font-family: "Font Awesome 5 Brands", fa-brands-400;
+  font-family: "Font Awesome 5 Brands", fa-brands-400;
 }
 
 .far {
-    font-family: "Font Awesome 5 Free", fa-regular-400;
+  font-family: "Font Awesome 5 Free", fa-regular-400;
 }
 
 .fas {
-    font-family: "Font Awesome 5 Free", fa-solid-900;
+  font-family: "Font Awesome 5 Free", fa-solid-900;
+}
+
+.mdi {
+  font-family: "Material Icons", MaterialIcons-Regular;
 }

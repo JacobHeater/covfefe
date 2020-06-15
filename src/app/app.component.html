@@ -1,13 +1,17 @@
 <RadSideDrawer #sideDrawer tkToggleNavButton>
-  <StackLayout tkDrawerContent class="sidedrawer-left">
-    <StackLayout class="sidedrawer-header" class="nav-header">
-      <Label [text]="appName"></Label>
+  <StackLayout tkDrawerContent class="sidedrawer">
+    <StackLayout class="sidedrawer-header">
+      <FlexboxLayout alignItems="center" justifyContent="center">
+        <Label [text]="appName"></Label>
+        <Label text="&nbsp;"></Label>
+        <Label class="mdi" [text]="icon"></Label>
+      </FlexboxLayout>
     </StackLayout>
     <StackLayout class="sidedrawer-content">
-      <ListView [items]="menuItems">
+      <ListView [items]="menuItems" height="350">
         <ng-template let-item="item">
           <StackLayout>
-            <Label (tap)="handleMenuClick(item)" [text]="item.text" class="nav-item"></Label>
+            <Label (tap)="handleMenuTap(item)" [text]="item.text" class="nav-item"></Label>
           </StackLayout>
         </ng-template>
       </ListView>

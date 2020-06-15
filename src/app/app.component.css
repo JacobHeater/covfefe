@@ -1,12 +1,17 @@
-.nav-header {
+.sidedrawer {
+  margin-top: 25;
+}
+
+.sidedrawer .sidedrawer-header {
   font-size: 21;
-  background-color: rgb(200, 200, 200);
   text-align: center;
   vertical-align: center;
   font-weight: bold;
   height: 50;
+  border-bottom-color: rgb(15, 15, 15);
+  border-bottom-width: 1;
 }
 
-.nav-item {
+.sidedrawer .sidedrawer-content .nav-item {
   font-size: 18;
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { PageBase } from "../common/page/page-base";
+import { PageBase } from "~/app/common/page/page-base";
 
 @Component({
   selector: "ns-home",
@@ -9,7 +9,11 @@ import { PageBase } from "../common/page/page-base";
 export class HomeComponent extends PageBase implements OnInit {
   ngOnInit(): void {}
 
+  static get title() {
+    return 'Dashboard';
+  }
+
   get $title(): string {
-    return 'Home';
+    return HomeComponent.title;
   }
 }

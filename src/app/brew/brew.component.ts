@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PageBase } from '../common/page/page-base';
+import { PageBase } from '~/app/common/page/page-base';
 
 @Component({
   selector: 'ns-brew',
@@ -8,7 +8,12 @@ import { PageBase } from '../common/page/page-base';
 })
 export class BrewComponent extends PageBase implements OnInit {
   ngOnInit(): void {}
+
+  static get title() {
+    return 'Brew';
+  }
+
   protected get $title(): string {
-    return 'Brewing';
+    return BrewComponent.title;
   }
 }
